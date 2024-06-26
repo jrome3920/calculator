@@ -18,12 +18,10 @@
 html {
     position: relative;
     min-height: 100%;
-    overflow: hidden;
 }
 
-.calculator{
-    background-color: transparent;
-    backdrop-filter: blur(20px);
+body{
+    margin-bottom: 100px;
 }
 
 .calculator {
@@ -36,6 +34,8 @@ html {
         rgba(255, 255, 255,0.3),
         rgba(59, 183, 126, 0.3)
     );
+    backdrop-filter: blur(20px);
+    margin-bottom: 100px;
 }
 
 .img-wrapper, .img-container{
@@ -130,4 +130,27 @@ html {
 #previous-result,
 #result {
     text-align: end;
+}
+
+/* --------------FOOTER---------------- */
+
+footer{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    letter-spacing: -2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: .5rem;
+}
+
+i.fa-github{
+    font-size: 30px;
+    transition: .4s ease;
+    cursor: pointer;
+
+    &:hover{
+        transform: rotate(360deg);
+    }
 }
