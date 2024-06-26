@@ -1,14 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');   
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Roboto Mono", monospace;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-html{
+:root {
+    --color-white: #FFFFFF;
+    --color-green: #3BB77E;
+    --color-black: #253D4E;
+}
+
+html {
     position: relative;
     min-height: 100%;
+    overflow: hidden;
 }
-  
+
+.calculator{
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+}
+
+.calculator {
+    padding: .6rem;
+    border-radius: 26px;
+    box-shadow: 6px 6px 20px 0px rgba(0, 0, 0, 0.25);
+    color: var(--color-black);
+    background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255,0.3),
+        rgba(59, 183, 126, 0.3)
+    );
+}
+
+.img-wrapper, .img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.img-container {
+    height: 32px;
+    width: 32px;
+    border: 1px solid #000;
+}
+
+.img-wrapper {
+    height: 36px;
+    width: 36px;
+    box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.10);
+    margin-bottom: 1.5rem;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
+    gap: 3px;
+}
+
+.grid-item {
+    margin: 0;
+}
+
+.calcu-btn {
+    width: 58px;
+    height: 44px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+.btn-white {
+    background-color: var(--color-white);
+    
+    &:hover{
+        background-color: #eeeeee;
+    }
+
+    &:active{
+        background-color: #e2e2e2;
+    }
+}
+
+.btn-green {
+    color: var(--color-white);
+    background-color: var(--color-green);
+
+    &:hover{
+        background-color: #36a872;
+    }
+
+    &:active{
+        background-color: #33a06d;
+    }
+}
+
+.btn-black {
+    color: var(--color-white);
+    background-color: var(--color-black);
+
+    &:hover{
+        background-color: #1e3442;
+    }
+
+    &:active{
+        background-color: #1b2f3c;
+    }
+}
+
+#result {
+    font-size: 56px;
+}
+
+#previous-result,
+#result {
+    text-align: end;
+}
