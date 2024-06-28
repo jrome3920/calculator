@@ -35,7 +35,6 @@ body{
         rgba(59, 183, 126, 0.3)
     );
     backdrop-filter: blur(20px);
-    margin-bottom: 100px;
 }
 
 .img-wrapper, .img-container{
