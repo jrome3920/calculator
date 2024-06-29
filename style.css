@@ -20,42 +20,56 @@ html {
     min-height: 100%;
 }
 
-body{
+body {
     margin-bottom: 100px;
+    background: var(--color-black) url(images/Group\ 4.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.result-wrapper{
+    padding: 1rem .5rem;
+    box-shadow: inset 0px 0px 20px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    margin-bottom: .5rem;
 }
 
 .calculator {
     padding: .6rem;
     border-radius: 26px;
-    box-shadow: 6px 6px 20px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.25);
     color: var(--color-black);
-    background-image: linear-gradient(
-        120deg,
-        rgba(255, 255, 255,0.3),
-        rgba(59, 183, 126, 0.3)
-    );
+    background-image: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.3),
+            rgba(59, 183, 126, 0.3));
     backdrop-filter: blur(20px);
 }
 
-.img-wrapper, .img-container{
+.img-container.chibi {
+    height: 260px;
+    width: 260px;
+    border-radius: 0;
+    position: relative;
+    overflow: visible;
+
+    & img {
+        height: 120%;
+        position: absolute;
+        left: -54px;
+        bottom: -96px;
+        pointer-events: none;
+        -webkit-filter: drop-shadow(6px 6px 4px rgba(0, 0, 0, 0.25));
+        filter: drop-shadow(6px 6px 4px rgba(0, 0, 0, 0.25));
+    }
+}
+
+.img-container {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-radius: 50%;
-}
-
-.img-container {
-    height: 32px;
-    width: 32px;
-    border: 1px solid #000;
-}
-
-.img-wrapper {
-    height: 36px;
-    width: 36px;
-    box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.10);
-    margin-bottom: 1.5rem;
 }
 
 .content-wrapper {
@@ -86,12 +100,13 @@ body{
 
 .btn-white {
     background-color: var(--color-white);
-    
-    &:hover{
+    color: var(--color-black);
+
+    &:hover {
         background-color: #eeeeee;
     }
 
-    &:active{
+    &:active {
         background-color: #e2e2e2;
     }
 }
@@ -100,11 +115,11 @@ body{
     color: var(--color-white);
     background-color: var(--color-green);
 
-    &:hover{
+    &:hover {
         background-color: #36a872;
     }
 
-    &:active{
+    &:active {
         background-color: #33a06d;
     }
 }
@@ -113,43 +128,64 @@ body{
     color: var(--color-white);
     background-color: var(--color-black);
 
-    &:hover{
+    &:hover {
         background-color: #1e3442;
     }
 
-    &:active{
+    &:active {
         background-color: #1b2f3c;
     }
 }
 
 #result {
-    font-size: 56px;
+    font-size: 36px;
 }
 
 #previous-result,
 #result {
     text-align: end;
+    color: var(--color-white);
 }
 
 /* --------------FOOTER---------------- */
 
-footer{
-    background-color: var(--color-black);
+footer {
     color: var(--color-white);
+    backdrop-filter: blur(2px);
     letter-spacing: -2px;
     width: 100%;
     position: absolute;
     bottom: 0;
     text-align: center;
     padding: .5rem;
+    background-image: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(59, 183, 126, 0.1));
 }
 
-i.fa-github{
+i.fa-github {
     font-size: 30px;
     transition: .4s ease;
     cursor: pointer;
+    color: var(--color-white);
 
-    &:hover{
+    &:hover {
         transform: rotate(360deg);
     }
+}
+
+/* --------------SCROLLBAR---------------- */
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--color-green);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-black);
+    border-radius: 20px;
+    border: 1px solid var(--color-green);
 }
