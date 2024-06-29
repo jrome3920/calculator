@@ -34,6 +34,7 @@ body {
     box-shadow: inset 0px 0px 20px rgba(0,0,0,0.2);
     border-radius: 12px;
     margin-bottom: .5rem;
+    height: 128px;
 }
 
 .calculator {
@@ -45,6 +46,7 @@ body {
             rgba(255, 255, 255, 0.3),
             rgba(59, 183, 126, 0.3));
     backdrop-filter: blur(20px);
+    margin-left: 1rem;
 }
 
 .img-container.chibi {
@@ -90,7 +92,7 @@ body {
     margin: 0;
 }
 
-.calcu-btn {
+button {
     width: 58px;
     height: 44px;
     border-radius: 12px;
